@@ -10,7 +10,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := lineageos_crosshatch_defconfig
+TARGET_KERNEL_CLANG_VERSION := 10.0.5
+TARGET_KERNEL_CONFIG := trm_crosshatch_defconfig
 TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
 
 # vendor.img
