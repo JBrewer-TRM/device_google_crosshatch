@@ -12,6 +12,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := trm_crosshatch_defconfig
 TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # vendor.img
 ifneq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
