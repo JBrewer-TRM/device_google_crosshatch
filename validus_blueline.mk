@@ -3,7 +3,7 @@ TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/validus/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
@@ -11,7 +11,7 @@ $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
 -include device/google/crosshatch/blueline/device-lineage.mk
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_blueline
+PRODUCT_NAME := validus_blueline
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 3
 TARGET_MANUFACTURER := Google
@@ -24,3 +24,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/blueline/blueline:10/QQ2A.200305.002/6138846:user/release-keys
 
 $(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
