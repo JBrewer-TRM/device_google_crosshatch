@@ -21,17 +21,17 @@ TARGET_BOARD_INFO_FILE := device/google/crosshatch/board-info.txt
 USES_DEVICE_GOOGLE_B1C1 := true
 
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a75
 TARGET_CPU_VARIANT_RUNTIME := kryo385
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT := cortex-a75
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 TARGET_BOARD_COMMON_PATH := device/google/crosshatch/sdm845
@@ -158,7 +158,6 @@ BOARD_GOOGLE_DYNAMIC_PARTITIONS_SIZE := 6441402368
 # Instead, we will add system_ext once it is ready.
 # BOARD_GOOGLE_DYNAMIC_PARTITIONS_PARTITION_LIST += \
 #    product_services \
-
 endif # PRODUCT_RETROFIT_DYNAMIC_PARTITIONS
 endif # PRODUCT_USE_DYNAMIC_PARTITIONS
 
@@ -247,6 +246,9 @@ DEVICE_MANIFEST_FILE := device/google/crosshatch/manifest.xml
 DEVICE_MATRIX_FILE := device/google/crosshatch/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/crosshatch/device_framework_matrix.xml
 
+# Faceunlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Userdebug only Vendor Interface Manifest
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/google/crosshatch/framework_manifest_userdebug.xml
@@ -270,3 +272,5 @@ TARGET_USES_MKE2FS := true
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/b1c1-setup.sh
 -include vendor/google_devices/crosshatch/proprietary/BoardConfigVendor.mk
+
+endif
