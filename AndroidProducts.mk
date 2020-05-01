@@ -15,9 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/validus_crosshatch.mk \
-    $(LOCAL_DIR)/validus_blueline.mk
+    $(LOCAL_DIR)/bliss_crosshatch.mk 
 
 COMMON_LUNCH_CHOICES := \
-    validus_crosshatch-userdebug \
-    validus_blueline-userdebug
+    bliss_crosshatch-userdebug 
